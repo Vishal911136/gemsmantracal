@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-gray-900{
+    background-color: hsl(220, 30%, 16%);
+}
+nav a, nav div[role]{
+    color: white;
+}
+nav a, nav div[role]:focus{
+    background: none;
+    color: white;
+}
+.active div[role]{ 
+    background: rgb(236 239 241);
+    opacity: 60 !important;
+    color: black !important;
+    border-radius: 8px;
+}

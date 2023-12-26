@@ -1,0 +1,26 @@
+.text_color{
+    color: #813C01;
+}   
+
+.text_color2{
+    color: #664421;
+}
+.btn_color{
+    background: #664421;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+.border_right{
+    border-right: 1px solid #66442193;
+}
+.bold{
+    font-weight: 600 !important;
+}
+.background_image{
+    background-image: url("https://gemsmantra.in/wp-content/plugins/plugin-astrologyCalculatorBloomx/img/resultbanner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
