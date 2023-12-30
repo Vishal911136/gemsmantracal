@@ -57,7 +57,7 @@ export default function GemsTable() {
     <>
       <div className="mt-6 col-span-3 w-auto lg:col-span-1 sm:mt-6 mx-2 bg-white shadow-2xl text_color2 font-bold overflow-hidden">
         <h1
-          className="text-[16px] text-[#813C01] font-bold text-center px-1 py-3"
+          className="text-[16px] text-[#813C01] font-bold text-center px-1 py-3 font-libra"
           style={{ background: "#fef8f3" }}
         >
           Which finger to wear Gemstones 
@@ -81,7 +81,7 @@ export default function GemsTable() {
                     <Typography
                       variant="small"
                       color="blue-gray"
-                      className="text-left font-semibold text-[#813C01] leading-none"
+                      className="text-left font-semibold text-[#813C01] leading-none font-libra "
                     >
                       Gems
                     </Typography>
@@ -90,7 +90,7 @@ export default function GemsTable() {
                     <Typography
                       variant="small"
                       color="blue-gray"
-                      className="text-left font-semibold text-[#813C01] leading-none"
+                      className="text-left font-semibold text-[#813C01] leading-none font-libra"
                     >
                       Gems Name
                     </Typography>
@@ -99,7 +99,7 @@ export default function GemsTable() {
                     <Typography
                       variant="small"
                       color="blue-gray"
-                      className="text-left font-semibold text-[#813C01] leading-none"
+                      className="text-left font-semibold text-[#813C01] leading-none font-libra"
                     >
                       Finger to wear
                     </Typography>
@@ -109,7 +109,7 @@ export default function GemsTable() {
             <tbody>
               {TABLE_ROWS.map(({ name, image, fingerName }, index) => {
                 // const isLast = index === TABLE_ROWS.length - 1;
-                const classes = "p-4 border text-[#664421] border-blue-gray-50";
+                const classes = "font-[700] p-2 border text-[#664421] border-blue-gray-50";
 
                 return (
                   <tr key={name}>
@@ -125,7 +125,7 @@ export default function GemsTable() {
                       <Typography
                         variant="small"
                         color="blue-gray"
-                        className="font-normal text_color "
+                        className="font-normal text_color font-libra"
                       >
                         {name}
                       </Typography>
@@ -134,7 +134,7 @@ export default function GemsTable() {
                       <Typography
                         variant="small"
                         color="blue-gray"
-                        className="font-normal text_color "
+                        className="font-normal text_color font-libra"
                       >
                         {fingerName}
                       </Typography>

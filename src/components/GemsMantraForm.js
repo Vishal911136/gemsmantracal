@@ -24,15 +24,16 @@ export default function GemsMantraForm() {
 
 
   const fetchLocation = async (e) => {
-    setPlace(e.target.value);
-    if(e.target.value.length === 0){
+    let str = e.target.value.replace(/[^a-zA-Z\s]/g, "")
+    setPlace(str);
+    if(str === 0){
       setCityList([])
     }
 
     try {
-      if (e.target.value.length >= 3) {
+      if (str.length >= 3) {
         let res = await fetch(
-          `https://sit.bloomxapi.in/api/search/${e.target.value}`
+          `https://sit.bloomxapi.in/api/search/${str}`
         );
         res = await res.json();
         setCityList(res);
@@ -71,7 +72,7 @@ export default function GemsMantraForm() {
     <>
     <div className="isolate bg-white px-2 py-8 sm:py-16 lg:px-8">
           <div className="mx-auto max-w-6xl text-center">
-            <h2 className="font-bold tracking-tight text_color text-lg sm:text-2xl md:text-4xl">Discover Your Rashi, Gemstones, Rudraksha and Bracelet
+            <h2 className="font-libra font-bold tracking-tight text_color text-lg sm:text-2xl md:text-4xl">Discover Your Rashi, Gemstones, Rudraksha and Bracelet
             Recommendation</h2>
               
           </div>
@@ -81,14 +82,14 @@ export default function GemsMantraForm() {
             className="rounded-md col-span-3 lg:col-span-2 mx-2 mt-6 w-auto sm:mt-6 bg-white p-6 px-8 sm:px-16 py-4 md:py-14 shadow-2xl"
             onSubmit={findGems}
           >
-            <h1 className="text-[#813C01] md:text-xl text-lg  py-6 sm:py-8 font-bold">
+            <h1 className="text-[#813C01] md:text-xl text-lg  py-6 sm:py-8 font-bold font-libra">
               Fill the form to get result:
             </h1>
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-[15px] text-[#664421] leading-6 "
+                  className="block text-[15px] text-[#664421] leading-6 font-manrope"
                 >
                   Enter your name
                 </label>
@@ -108,7 +109,7 @@ export default function GemsMantraForm() {
               <div>
                 <label
                   htmlFor="last-name"
-                  className="block text-[15px] text-[#664421] leading-6 "
+                  className="block text-[15px] text-[#664421] leading-6  font-manrope"
                 >
                   Enter your email
                 </label>
@@ -129,7 +130,7 @@ export default function GemsMantraForm() {
               <div>
                 <label
                   htmlFor="first-name"
-                  className="block text-[15px] text-[#664421] leading-6 "
+                  className="block text-[15px] text-[#664421] leading-6  font-manrope"
                 >
                   Enter your phone number
                 </label>
@@ -150,7 +151,7 @@ export default function GemsMantraForm() {
               <div>
                 <label
                   htmlFor="last-name"
-                  className="block text-[15px] text-[#664421] leading-6 "
+                  className="block text-[15px] text-[#664421] leading-6  font-manrope"
                 >
                   Enter your gender
                 </label>
@@ -171,7 +172,7 @@ export default function GemsMantraForm() {
               <div>
                 <label
                   htmlFor="first-name"
-                  className="block text-[15px] text-[#664421] leading-6 "
+                  className="block text-[15px] text-[#664421] leading-6  font-manrope"
                 >
                   Purpose to wear gemstone
                 </label>
@@ -198,7 +199,7 @@ export default function GemsMantraForm() {
               <div>
                 <label
                   htmlFor="last-name"
-                  className="block text-[15px] text-[#664421] leading-6 "
+                  className="block text-[15px] text-[#664421] leading-6  font-manrope"
                 >
                   Body weight (in kg)
                 </label>
@@ -219,7 +220,7 @@ export default function GemsMantraForm() {
               <div>
                 <label
                   htmlFor="first-name"
-                  className="block text-[15px] text-[#664421] leading-6 "
+                  className="block text-[15px] text-[#664421] leading-6  font-manrope"
                 >
                   Enter your birth date
                 </label>
@@ -239,7 +240,7 @@ export default function GemsMantraForm() {
               <div>
                 <label
                   htmlFor="first-name"
-                  className="block text-[15px] text-[#664421] leading-6 "
+                  className="block text-[15px] text-[#664421] leading-6  font-manrope"
                 >
                   Enter your birth time
                 </label>
@@ -259,7 +260,7 @@ export default function GemsMantraForm() {
               <div>
                 <label
                   htmlFor="first-name"
-                  className="block text-[15px] text-[#664421] leading-6 "
+                  className="block text-[15px] text-[#664421] leading-6  font-manrope"
                 >
                   Enter your birth place
                 </label>
